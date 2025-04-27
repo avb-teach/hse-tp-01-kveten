@@ -6,7 +6,7 @@ if["$1" = "--max_depth"]; then
     output="$4"
 else
     input="$1"
-    output="$2
+    output="$2"
 fi
 
 if[[-z "max_depth"]]; then
