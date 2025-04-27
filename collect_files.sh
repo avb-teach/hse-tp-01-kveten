@@ -9,14 +9,14 @@ else
     output="$2"
 fi
 
-if[[-z "max_depth"]]; then
+if[-z "$max_depth"]; then
     find "$input" -type f | while read file; do
-        filepath = $(basename "$file")
-        cp "$file" "$output/$filepath"
+        name = $(basename "$file")
+        cp "$file" "$output/$name"
     done
 else
     find "$input" -maxdepth "$maxdepth" -type f | while read file; do
-        filepath = $(basename "$file")
-        cp "$file" "$output/$filepath"
+        name = $(basename "$file")
+        cp "$file" "$output/$name"
     done
 fi
